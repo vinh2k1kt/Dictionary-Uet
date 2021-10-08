@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="535.0" prefWidth="90.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox layoutX="4.0" layoutY="122.0" prefHeight="248.0" prefWidth="78.0" spacing="10.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="122.0">
+                            <children>
+                                <JFXButton id="menuItem" focusTraversable="false" onAction="#gotoEditScene" prefHeight="150.0" prefWidth="90.0" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                                <JFXButton id="menuItem" focusTraversable="false" onAction="#gotoAddScene" prefHeight="150.0" prefWidth="90.0" text="Add" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                                <JFXButton id="menuItem" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="150.0" prefWidth="90.0" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                                <JFXButton id="menuItem" focusTraversable="false" onAction="#functionBack" prefHeight="150.0" prefWidth="90.0" text="Back" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                            </children></VBox>
+                        <ImageView fitHeight="64.0" fitWidth="67.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.200000000000003" AnchorPane.topAnchor="14.0">
+                            <image>
+                                <Image url="@image/translation.png" />
+                            </image>
+                        </ImageView>
+                        <JFXButton id="menuItem" focusTraversable="false" layoutY="459.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="87.0" text="About us" textFill="WHITE" AnchorPane.bottomAnchor="21.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+            <TextField fx:id="removeWord" alignment="CENTER" layoutX="191.0" layoutY="198.0" prefHeight="34.0" prefWidth="526.0" style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="77.60000000000002" />
+            <Label layoutX="385.0" layoutY="135.0" prefHeight="46.0" prefWidth="138.0" text="Word wanna remove" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="272.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <JFXButton fx:id="remove" layoutX="103.0" layoutY="258.0" maxHeight="34.0" maxWidth="103.0" prefHeight="34.0" prefWidth="103.0" style="-fx-background-color: #04c7b3;" text="Remove" textFill="WHITE" AnchorPane.leftAnchor="399.0" AnchorPane.rightAnchor="292.8" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
