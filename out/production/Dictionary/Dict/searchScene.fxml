@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -11,45 +13,90 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
    <children>
-      <AnchorPane layoutX="-1.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="535.0" prefWidth="90.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox layoutX="4.0" layoutY="122.0" prefHeight="248.0" prefWidth="88.0" spacing="10.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0">
+                  <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
-                        <JFXButton focusTraversable="false" onAction="#gotoEditScene" prefHeight="150.0" prefWidth="90.0" text="Edit" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoEditScene" prefHeight="38.0" prefWidth="95.0" text="Sửa" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
-                           </font></JFXButton>
-                        <JFXButton focusTraversable="false" onAction="#gotoAddScene" prefHeight="150.0" prefWidth="90.0" text="Add" textFill="WHITE">
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-edit-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass></JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoAddScene" prefHeight="36.0" prefWidth="106.0" text="Thêm" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
-                           </font></JFXButton>
-                        <JFXButton focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="150.0" prefWidth="90.0" text="Remove" textFill="WHITE">
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-add-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="86.0" text="Xoá" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
-                           </font></JFXButton>
-                        <JFXButton focusTraversable="false" onAction="#functionBack" prefHeight="150.0" prefWidth="90.0" text="Back" textFill="WHITE">
-                           <font>
-                              <Font size="15.0" />
-                           </font></JFXButton>
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="222.0" pickOnBounds="true" preserveRatio="true" x="20.0" y="444.0">
+                                 <image>
+                                    <Image url="@image/icons8-delete-50.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D minX="20.0" minY="40.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass></JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#functionBack" prefHeight="37.0" prefWidth="99.0" text="Trở lại" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/back-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass></JFXButton>
                      </children></VBox>
                   <ImageView fitHeight="64.0" fitWidth="67.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.400000000000006" AnchorPane.topAnchor="14.0">
                      <image>
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutY="459.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="87.0" text="About us" textFill="WHITE" AnchorPane.bottomAnchor="21.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
                </children>
             </AnchorPane>
-            <TextField layoutX="103.0" layoutY="14.0" prefHeight="34.0" prefWidth="660.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0" />
-            <VBox layoutX="102.0" layoutY="98.0" maxHeight="450.0" prefHeight="363.0" prefWidth="138.0" spacing="5.0" AnchorPane.bottomAnchor="28.0" AnchorPane.topAnchor="98.0">
+            <TextField layoutX="144.0" layoutY="14.0" prefHeight="34.0" prefWidth="677.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" styleClass="font" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="14.0" />
+            <VBox layoutX="144.0" layoutY="96.0" maxHeight="450.0" prefHeight="363.0" prefWidth="138.0" spacing="5.0" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="96.0">
                <children>
                   <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
@@ -60,56 +107,209 @@
                   <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
                </children>
             </VBox>
-            <Label alignment="CENTER" layoutX="101.0" layoutY="73.0" prefHeight="18.0" prefWidth="138.0" text="Searching Word">
+            <Label alignment="CENTER" layoutX="144.0" layoutY="70.0" prefHeight="18.0" prefWidth="138.0" text="Searching Word">
                <font>
                   <Font size="14.0" />
                </font></Label>
-            <Label layoutX="307.0" layoutY="209.0" prefHeight="26.0" prefWidth="118.0" text="Meaning" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="370.0">
+            <Label layoutX="321.0" layoutY="209.0" prefHeight="26.0" prefWidth="118.0" text="Meaning" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="356.0">
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <JFXButton alignment="CENTER_RIGHT" layoutX="729.0" layoutY="14.0" prefHeight="34.0" prefWidth="34.0" text="1" AnchorPane.rightAnchor="31.600000000000023" AnchorPane.topAnchor="14.0">
+            <JFXButton alignment="CENTER" contentDisplay="TEXT_ONLY" graphicTextGap="3.0" layoutX="745.0" layoutY="14.0" prefHeight="34.0" prefWidth="64.0" style="-fx-border-radius: 12px;" styleClass="button1" text="Search" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="14.0">
                <font>
-                  <Font size="1.0" />
+                  <Font name="Bodoni MT" size="1.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/icons8-search-50.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <Label layoutX="310.0" layoutY="66.0" prefHeight="34.0" prefWidth="45.0" text="Word" AnchorPane.leftAnchor="310.0" AnchorPane.rightAnchor="439.4" AnchorPane.topAnchor="66.0">
+            <Label layoutX="321.0" layoutY="66.0" prefHeight="34.0" prefWidth="45.0" text="Word" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="428.4" AnchorPane.topAnchor="66.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="634.0" layoutY="70.0" prefHeight="26.0" prefWidth="74.0" text="Spelling">
+            <Label layoutX="684.0" layoutY="69.0" prefHeight="26.0" prefWidth="74.0" text="Spelling">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <JFXButton layoutX="702.0" layoutY="159.0" prefHeight="43.0" prefWidth="64.0" text="1">
+            <JFXButton contentDisplay="RIGHT" layoutX="684.0" layoutY="161.0" prefHeight="30.0" prefWidth="130.0" styleClass="button2" text="1">
                <font>
                   <Font size="1.0" />
                </font>
-               <graphic>
-                  <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+            </JFXButton>
+            <Label layoutX="670.0" layoutY="275.0" prefHeight="22.0" prefWidth="64.0" text="Pronoun">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" focusTraversable="false" layoutX="321.0" layoutY="96.0" prefHeight="92.0" prefWidth="291.0" style="-fx-border-color: grey;" />
+            <TextArea editable="false" layoutX="684.0" layoutY="95.0" prefHeight="42.0" prefWidth="130.0" style="-fx-border-color: grey;" />
+            <ImageView fitHeight="26.0" fitWidth="37.0" layoutX="736.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" styleClass="button2">
+               <image>
+                  <Image url="@image/icons8-audio-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoEditScene" prefHeight="38.0" prefWidth="95.0" text="Sửa" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-edit-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoAddScene" prefHeight="36.0" prefWidth="106.0" text="Thêm" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-add-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="99.0" text="  Xoá" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="222.0" pickOnBounds="true" preserveRatio="true" x="20.0" y="444.0">
+                                 <image>
+                                    <Image url="@image/icons8-delete-50.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D minX="20.0" minY="40.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#functionBack" prefHeight="37.0" prefWidth="99.0" text="Trở lại" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/back-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="78.0" fitWidth="86.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
                      <image>
-                        <Image url="@image/icons8-audio-50.png" />
+                        <Image url="@image/translation.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <TextField layoutX="144.0" layoutY="14.0" prefHeight="34.0" prefWidth="677.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" styleClass="font" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="14.0" />
+            <VBox layoutX="144.0" layoutY="96.0" maxHeight="450.0" prefHeight="363.0" prefWidth="138.0" spacing="5.0" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="96.0">
+               <children>
+                  <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="144.0" text=" Searched Word" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="144.0" layoutY="70.0" prefHeight="18.0" prefWidth="138.0" text="Searching Word">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="321.0" layoutY="217.0" prefHeight="26.0" prefWidth="78.0" text="Meaning" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="462.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="745.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Bodoni MT" size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/icons8-search-50.png" />
                      </image>
                   </ImageView>
                </graphic>
             </JFXButton>
-            <Label layoutX="634.0" layoutY="169.0" prefHeight="22.0" prefWidth="64.0" text="Pronoun">
+            <Label layoutX="321.0" layoutY="66.0" prefHeight="34.0" prefWidth="54.0" text="Word" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="486.0" AnchorPane.topAnchor="66.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextArea editable="false" layoutX="307.0" layoutY="237.0" prefHeight="271.0" prefWidth="452.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="237.0" />
-            <TextArea editable="false" focusTraversable="false" layoutX="307.0" layoutY="101.0" prefHeight="92.0" prefWidth="291.0" style="-fx-border-color: grey;" />
-            <TextArea editable="false" layoutX="634.0" layoutY="101.0" prefHeight="22.0" prefWidth="118.0" style="-fx-border-color: grey;" />
+            <Label layoutX="684.0" layoutY="69.0" prefHeight="26.0" prefWidth="74.0" text="Spelling">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton contentDisplay="RIGHT" layoutX="767.0" layoutY="141.0" prefHeight="54.0" prefWidth="54.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px;" text="1">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button2" />
+                  <String fx:value="fonta" />
+               </styleClass>
+            </JFXButton>
+            <ImageView disable="true" fitHeight="54.0" fitWidth="54.0" layoutX="767.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" styleClass="button2">
+               <image>
+                  <Image url="@image/icons8-audio-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="683.0" layoutY="142.0" prefHeight="54.0" prefWidth="74.0" styleClass="fontsize" text="Pronoun">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" disable="true" graphicTextGap="6.0" layoutX="321.0" layoutY="96.0" prefHeight="103.0" prefWidth="326.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-font-size: 30;" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" disable="true" layoutX="684.0" layoutY="98.0" prefHeight="42.0" prefWidth="138.0" style="-fx-background-color: white; -fx-border-color: grey;" />
          </children>
       </AnchorPane>
    </children>

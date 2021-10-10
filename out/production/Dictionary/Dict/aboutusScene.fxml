@@ -1,50 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
     <children>
         <AnchorPane layoutX="-1.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <AnchorPane prefHeight="535.0" prefWidth="90.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <VBox layoutX="4.0" layoutY="122.0" prefHeight="248.0" prefWidth="78.0" spacing="10.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="122.0">
-                            <children>
-                                <JFXButton focusTraversable="false" onAction="#gotoEditScene" prefHeight="150.0" prefWidth="90.0" text="Edit" textFill="WHITE">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font></JFXButton>
-                                <JFXButton focusTraversable="false" onAction="#gotoAddScene" prefHeight="150.0" prefWidth="90.0" text="Add" textFill="WHITE">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font></JFXButton>
-                                <JFXButton focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="150.0" prefWidth="90.0" text="Remove" textFill="WHITE">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font></JFXButton>
-                                <JFXButton focusTraversable="false" onAction="#functionBack" prefHeight="150.0" prefWidth="90.0" text="Back" textFill="WHITE">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font></JFXButton>
-                            </children></VBox>
-                        <ImageView fitHeight="64.0" fitWidth="67.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.200000000000003" AnchorPane.topAnchor="14.0">
-                            <image>
-                                <Image url="@image/translation.png" />
-                            </image>
-                        </ImageView>
-                  <JFXButton focusTraversable="false" layoutY="459.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="87.0" text="About us" textFill="WHITE" AnchorPane.bottomAnchor="21.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoEditScene" prefHeight="38.0" prefWidth="95.0" text="Sửa" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-edit-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoAddScene" prefHeight="36.0" prefWidth="118.0" text="Thêm" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/icons8-add-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="103.0" text="  Xóa" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="222.0" pickOnBounds="true" preserveRatio="true" x="20.0" y="444.0">
+                                 <image>
+                                    <Image url="@image/icons8-delete-50.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D minX="20.0" minY="40.0" />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#functionBack" prefHeight="37.0" prefWidth="116.0" text="Trở lại" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/back-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="button1" />
+                              <String fx:value="font" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="78.0" fitWidth="86.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+                     <image>
+                        <Image url="@image/translation.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
-                    </children>
-                </AnchorPane>
-            </children>
+               </children>
+            </AnchorPane>
+         </children>
         </AnchorPane>
     </children>
 </AnchorPane>
