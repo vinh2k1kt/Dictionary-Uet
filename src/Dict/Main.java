@@ -16,7 +16,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("searchScene.fxml"));
     primaryStage.setTitle("Dictionary");
-    primaryStage.getIcons().add(new Image("Dict/dictionary1.png"));
+    primaryStage.getIcons().add(new Image("Dict/image/dictionary.png"));
     primaryStage.setScene(new Scene(root));
     root.getStylesheets().add("style.css");
     primaryStage.show();
