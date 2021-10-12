@@ -5,10 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.sql.SQLException;
 
 public class Main extends Application {
     private SearchHistory searchHistory;
+
     {
         try {
             searchHistory = new SearchHistory();
@@ -18,8 +20,10 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    public void start(Stage primaryStage) throws Exception {
+        SearchHistory.init();
+        InitDB.init();
+        Parent root = FXMLLoader.load(getClass().getResource("searchScene.fxml"));
         primaryStage.setTitle("Dictionary");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
