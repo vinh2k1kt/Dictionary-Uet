@@ -30,7 +30,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class SearchController implements Initializable {
     private ObservableList<String> searched = FXCollections.observableArrayList();
     private Stage stage;
     private Scene scene;
@@ -75,7 +75,7 @@ public class Controller implements Initializable {
     private WebView showDetails;
 
 
-    public Controller() throws SQLException {
+    public SearchController() throws SQLException {
     }
 
     /*
