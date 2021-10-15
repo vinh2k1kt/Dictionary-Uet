@@ -22,6 +22,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
@@ -60,10 +61,10 @@ public class SearchController implements Initializable {
     ListView<String> Suggest;
 
     @FXML
-    TextArea showPronounce;
+    Label showPronounce;
 
     @FXML
-    TextArea showWord;
+    Label showWord;
 
     @FXML
     Label warningLabel = new Label();
@@ -115,18 +116,14 @@ public class SearchController implements Initializable {
      * Initialize.
      */
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if (Suggest != null
-        && suggestChanged != null
-        && searched != null
-        && History != null) {
-            Suggest.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-            Suggest.getSelectionModel().selectedItemProperty().addListener(suggestChanged);
+        System.out.println("Search Init");
+        Suggest.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        Suggest.getSelectionModel().selectedItemProperty().addListener(suggestChanged);
 
-            searched.addAll(SearchHistory.searchedWords);
+        searched.addAll(SearchHistory.searchedWords);
 
-            History.getSelectionModel().selectedItemProperty().addListener(historyChanged);
-            History.setItems(searched);
-        }
+        History.getSelectionModel().selectedItemProperty().addListener(historyChanged);
+        History.setItems(searched);
     }
 
     @FXML
@@ -135,9 +132,6 @@ public class SearchController implements Initializable {
      */
     void Barking(ActionEvent event) {
         System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
-        for (Voice voice : VoiceManager.getInstance().getVoices()) {
-            System.out.println(voice.getName());
-        }
         Voice voice = VoiceManager.getInstance().getVoice("kevin16");
         if (voice != null) {
             voice.allocate();
