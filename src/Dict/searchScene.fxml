@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.SearchController">
    <children>
       <AnchorPane layoutX="-1.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -48,16 +49,16 @@
                   </JFXButton>
                </children>
             </AnchorPane>
-            <TextField layoutX="103.0" layoutY="14.0" prefHeight="34.0" prefWidth="660.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0" />
+            <TextField fx:id="textField" layoutX="103.0" layoutY="14.0" onKeyTyped="#updateOnKeyType" onMouseClicked="#listOnClicked" onMouseDragged="#listOnClicked" prefHeight="34.0" prefWidth="660.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0" />
             <VBox layoutX="102.0" layoutY="98.0" maxHeight="450.0" prefHeight="363.0" prefWidth="138.0" spacing="5.0" AnchorPane.bottomAnchor="28.0" AnchorPane.topAnchor="98.0">
                <children>
-                  <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
+                  <JFXListView fx:id="Suggest" maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" />
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="144.0" text=" Searched Word" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <JFXListView maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
+                  <JFXListView fx:id="History" maxHeight="450.0" prefHeight="450.0" style="-fx-border-color: grey;" />
                </children>
             </VBox>
             <Label alignment="CENTER" layoutX="101.0" layoutY="73.0" prefHeight="18.0" prefWidth="138.0" text="Searching Word">
@@ -68,7 +69,7 @@
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <JFXButton alignment="CENTER_RIGHT" layoutX="729.0" layoutY="14.0" prefHeight="34.0" prefWidth="34.0" text="1" AnchorPane.rightAnchor="31.600000000000023" AnchorPane.topAnchor="14.0">
+            <JFXButton fx:id="search" alignment="CENTER_RIGHT" layoutX="729.0" layoutY="14.0" onAction="#Searching" prefHeight="34.0" prefWidth="34.0" text="1" AnchorPane.rightAnchor="31.600000000000023" AnchorPane.topAnchor="14.0">
                <font>
                   <Font size="1.0" />
                </font>
@@ -85,12 +86,12 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="634.0" layoutY="70.0" prefHeight="26.0" prefWidth="74.0" text="Spelling">
+            <Label layoutX="634.0" layoutY="70.0" prefHeight="26.0" prefWidth="74.0" text="Pronounce">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <JFXButton layoutX="702.0" layoutY="159.0" prefHeight="43.0" prefWidth="64.0" text="1">
+            <JFXButton fx:id="prounounce" layoutX="702.0" layoutY="159.0" onAction="#Barking" prefHeight="43.0" prefWidth="64.0" text="1">
                <font>
                   <Font size="1.0" />
                </font>
@@ -107,9 +108,9 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextArea editable="false" layoutX="307.0" layoutY="237.0" prefHeight="271.0" prefWidth="452.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="237.0" />
-            <TextArea editable="false" focusTraversable="false" layoutX="307.0" layoutY="101.0" prefHeight="92.0" prefWidth="291.0" style="-fx-border-color: grey;" />
-            <TextArea editable="false" layoutX="634.0" layoutY="101.0" prefHeight="22.0" prefWidth="118.0" style="-fx-border-color: grey;" />
+            <TextArea fx:id="showWord" editable="false" focusTraversable="false" layoutX="307.0" layoutY="101.0" prefHeight="92.0" prefWidth="291.0" style="-fx-border-color: grey;" />
+            <TextArea fx:id="showPronounce" editable="false" layoutX="634.0" layoutY="101.0" prefHeight="22.0" prefWidth="118.0" style="-fx-border-color: grey;" />
+            <WebView fx:id="showDetails" layoutX="309.0" layoutY="237.0" prefHeight="271.0" prefWidth="452.0" AnchorPane.bottomAnchor="26.79998779296875" AnchorPane.leftAnchor="309.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="237.0" />
          </children>
       </AnchorPane>
    </children>
