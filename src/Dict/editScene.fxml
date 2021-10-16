@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.EditController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-            <TextField fx:id="Search" layoutX="140.0" layoutY="14.0" onKeyTyped="#updateOnKeyTyped" onMouseClicked="#onFocus" onMouseDragged="#onFocus" prefHeight="34.0" prefWidth="526.0" promptText="Type your word you want to edit here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0" />
-            <JFXButton fx:id="searchButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="721.0" layoutY="14.0" onAction="#Searaching" prefHeight="34.0" prefWidth="40.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0">
+            <TextField fx:id="searchEdit" layoutX="140.0" layoutY="14.0" prefHeight="34.0" prefWidth="526.0" promptText="Type your word you want to edit here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0" />
+            <JFXButton fx:id="searchButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="721.0" layoutY="14.0" prefHeight="34.0" prefWidth="98.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0">
                <font>
                   <Font size="1.0" />
                </font>
@@ -30,11 +30,11 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" styleClass="shadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0">
+                  <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
-                        <JFXButton buttonType="RAISED" focusTraversable="false" prefHeight="38.0" prefWidth="95.0" text="Sửa" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoEditScene" prefHeight="38.0" prefWidth="95.0" text="Sửa" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -105,22 +105,22 @@
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
                </children>
             </AnchorPane>
-            <ListView fx:id="Suggest" layoutX="137.0" layoutY="88.0" prefHeight="473.0" prefWidth="171.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="88.0" />
+            <ListView layoutX="137.0" layoutY="88.0" prefHeight="474.0" prefWidth="171.0" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="88.0" />
             <Label alignment="CENTER" layoutX="370.0" layoutY="61.0" prefHeight="26.0" prefWidth="210.0" text="Từ" />
-            <Label fx:id="Word" alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="87.0" prefHeight="62.0" prefWidth="228.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="87.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-color: white; -fx-border-color: grey;" />
             <Label alignment="CENTER" layoutX="618.0" layoutY="61.0" prefHeight="26.0" prefWidth="210.0" text="Phiên âm" />
-            <Label fx:id="Pronounce" alignment="CENTER" contentDisplay="CENTER" layoutX="614.0" layoutY="87.0" prefHeight="62.0" prefWidth="228.0" style="-fx-background-color: white; -fx-border-color: grey;" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="618.0" layoutY="87.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-color: white; -fx-border-color: grey;" />
             <Label alignment="CENTER" layoutX="137.0" layoutY="61.0" prefHeight="26.0" prefWidth="171.0" text="Từ gợi ý" />
+            <WebView layoutX="370.0" layoutY="181.0" prefHeight="346.0" prefWidth="461.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="181.0" />
             <Label alignment="CENTER" layoutX="553.0" layoutY="149.0" prefHeight="26.0" prefWidth="95.0" styleClass="text" text="Nghĩa" AnchorPane.leftAnchor="553.0" AnchorPane.rightAnchor="212.79999999999995" />
-            <JFXButton fx:id="Confirm" layoutX="562.0" layoutY="525.0" onAction="#Submit" prefHeight="35.0" prefWidth="78.0" style="-fx-border-color: grey; -fx-border-radius: 12px; -fx-background-radius: 12px;" styleClass="buttonSearch" text="Confirm" AnchorPane.bottomAnchor="14.799999999999955" />
-            <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="327.0" layoutY="175.0" prefHeight="338.0" prefWidth="516.0" AnchorPane.bottomAnchor="61.60000000000002" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="175.0" />
+            <JFXButton layoutX="562.0" layoutY="527.0" prefHeight="35.0" prefWidth="78.0" style="-fx-border-color: grey; -fx-border-radius: 12px; -fx-background-radius: 12px;" styleClass="buttonSearch" text="Confirm" AnchorPane.bottomAnchor="12.799999999999955" AnchorPane.leftAnchor="562.0" AnchorPane.rightAnchor="221.0" />
             </children>
         </AnchorPane>
     </children>

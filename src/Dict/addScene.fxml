@@ -12,19 +12,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.AddController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
     <children>
         <AnchorPane layoutX="-1.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-            <TextField fx:id="Word" alignment="CENTER" layoutX="173.0" layoutY="79.0" prefHeight="34.0" prefWidth="165.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="523.0" />
-            <Label alignment="CENTER" layoutX="174.0" layoutY="44.0" prefHeight="34.0" prefWidth="165.0" text="Word wanna add:" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="522.0" />
-            <Label alignment="CENTER" layoutX="172.0" layoutY="123.0" prefHeight="18.0" prefWidth="538.0" text="Word meaning" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="106.60000000000002" />
-            <JFXButton fx:id="confirm" alignment="CENTER" layoutX="389.0" layoutY="480.0" onAction="#Submit" prefHeight="34.0" prefWidth="81.0" style="-fx-background-color: #04c7b3;" styleClass="BUTTON" text="Confirm" textFill="WHITE" AnchorPane.bottomAnchor="20.6" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="325.0">
+            <TextField fx:id="add" alignment="CENTER" layoutX="173.0" layoutY="79.0" prefHeight="34.0" prefWidth="274.0" promptText="Điền từ cần thêm..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="173.0" />
+            <Label alignment="CENTER" layoutX="173.0" layoutY="44.0" prefHeight="34.0" prefWidth="274.0" text="Từ muốn thêm " AnchorPane.leftAnchor="173.0" />
+            <Label alignment="CENTER" layoutX="172.0" layoutY="121.0" prefHeight="26.0" prefWidth="622.0" text="Nghĩa của từ" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="67.0" />
+            <JFXButton fx:id="confirm" alignment="CENTER" layoutX="408.0" layoutY="525.0" prefHeight="34.0" prefWidth="81.0" style="-fx-background-color: #04c7b3;" styleClass="BUTTON" text="Xác nhận" textFill="WHITE" AnchorPane.bottomAnchor="14.799999999999955" AnchorPane.leftAnchor="408.0" AnchorPane.rightAnchor="303.0">
                <font>
                   <Font size="15.0" />
                </font>
             </JFXButton>
-            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" styleClass="shadow" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
@@ -44,7 +44,7 @@
                               <String fx:value="font" />
                            </styleClass>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" focusTraversable="false" prefHeight="36.0" prefWidth="106.0" text="Thêm" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoAddScene" prefHeight="36.0" prefWidth="106.0" text="Thêm" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -99,16 +99,16 @@
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
                </children>
             </AnchorPane>
-            <TextField fx:id="Pronounce" alignment="CENTER" layoutX="571.0" layoutY="79.0" onMouseClicked="#checkWord" prefHeight="34.0" prefWidth="165.0" promptText="Type your word here..." style="-fx-background-radius: 12px;" />
-            <Label alignment="CENTER" layoutX="571.0" layoutY="44.0" prefHeight="34.0" prefWidth="165.0" text="Prounounce" />
-            <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="148.0" onMouseClicked="#checkWord" prefHeight="359.0" prefWidth="592.0" />
+            <TextField alignment="CENTER" layoutX="536.0" layoutY="78.0" prefHeight="34.0" prefWidth="254.0" promptText="ĐIền phiên âm..." style="-fx-background-radius: 12px;" AnchorPane.rightAnchor="70.6" />
+            <Label alignment="CENTER" layoutX="536.0" layoutY="48.0" prefHeight="26.0" prefWidth="254.0" text="Phiên âm" AnchorPane.rightAnchor="70.60000000000002" />
+            <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="147.0" prefHeight="365.0" prefWidth="622.0" style="-fx-border-color: grey;" AnchorPane.bottomAnchor="62.39999999999998" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="66.60000000000002" AnchorPane.topAnchor="147.0" />
             </children>
         </AnchorPane>
     </children>
