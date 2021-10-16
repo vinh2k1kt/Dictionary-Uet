@@ -3,6 +3,9 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.lang.String?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +16,7 @@
     <children>
         <AnchorPane layoutX="-1.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" styleClass="shadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
@@ -88,11 +91,39 @@
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="112.0" prefHeight="575.0" prefWidth="751.0" styleClass="backgroundImage" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="-2.2000000000000455" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="300.0" prefHeight="22.0" prefWidth="200.0" AnchorPane.leftAnchor="25.0" />
+                  <Hyperlink alignment="CENTER" focusTraversable="false" layoutX="38.0" layoutY="345.0" prefHeight="28.0" prefWidth="186.0" style="-fx-text-fill: RED; -fx-font-size: 17;" text="Facebook" AnchorPane.leftAnchor="38.0" />
+                  <Hyperlink alignment="CENTER" focusTraversable="false" layoutX="508.0" layoutY="345.0" prefHeight="34.0" prefWidth="206.0" style="-fx-text-fill: RED; -fx-font-size: 17;" text="Facebook" AnchorPane.rightAnchor="43.0" />
+                  <Hyperlink alignment="CENTER" focusTraversable="false" layoutX="188.0" layoutY="432.0" prefHeight="66.0" prefWidth="374.0" style="-fx-text-fill: RED; -fx-font-size: 25;" text="Dictionary's Project Git Link" underline="true" AnchorPane.bottomAnchor="76.80000000000007" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="189.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Hyperlink>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="54.0">
+                     <image>
+                        <Image url="@image/kwanavt-modified.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="526.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="75.20000000000005">
+                     <image>
+                        <Image url="@image/vingavt-modified.png" />
+                     </image>
+                  </ImageView>
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="35.0" layoutY="256.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="Nguyễn Việt Quân" />
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="35.0" layoutY="306.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="19020596" />
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="35.0" layoutY="380.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="FE Designer" />
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="508.0" layoutY="247.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="Trần Ngọc Vinh" AnchorPane.rightAnchor="55.200000000000045" />
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="508.0" layoutY="306.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="19020659" AnchorPane.rightAnchor="55.200000000000045" />
+                  <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="508.0" layoutY="380.0" style="-fx-background-radius: 12px; -fx-border-radius: 12px; -fx-border-color: grey;" text="  BE Developer" AnchorPane.rightAnchor="55.200000000000045" />
                </children>
             </AnchorPane>
          </children>

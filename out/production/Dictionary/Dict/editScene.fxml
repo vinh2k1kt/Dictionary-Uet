@@ -30,7 +30,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" styleClass="shadow" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
@@ -105,7 +105,7 @@
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>

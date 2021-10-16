@@ -1,17 +1,15 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap";
+*{
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 15;
+    -fx-font-weight: 400;
+}
 .button1:hover{
     -fx-background-color: #fcfc03;
     -fx-text-fill: black;
      -fx-content-display: LEFT;
 }
-@font-face {
-    font-family: 'Roboto';
-    src: url('Roboto-Medium.ttf');
-}
 
-.text {
-    -fx-font-family: "Roboto";
-    -fx-font-size: 16;
-}
 .button2:hover{
     -fx-background-color: white;
     -fx-background-radius: 12px;
@@ -22,7 +20,7 @@
 }
 
 .fontsize {
-    -fx-font-size: 15;
+    -fx-font-size: 20;
 }
 .fonta {
     -fx-text-fill: transparent;
@@ -35,4 +33,11 @@
      -fx-font-size: 12;
      -fx-text-fill: white;
       -fx-border-color: grey;
+}
+.backgroundImage {
+     -fx-background-image: url("Dict/image/temp.jpg");
+     -fx-background-size: 100% 100%;
+}
+.shadow {
+   -fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0);
 }

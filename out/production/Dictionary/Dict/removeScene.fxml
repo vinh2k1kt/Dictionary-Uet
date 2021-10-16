@@ -15,12 +15,7 @@
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-            <TextField fx:id="removeWord" alignment="CENTER" layoutX="191.0" layoutY="198.0" prefHeight="34.0" prefWidth="526.0" style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="77.60000000000002" />
-            <Label alignment="CENTER" layoutX="380.0" layoutY="151.0" prefHeight="46.0" prefWidth="138.0" text="Word wanna remove" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="277.0">
-               <font>
-                  <Font size="15.0" />
-               </font></Label>
-            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3;" styleClass="shadow" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <children>
@@ -95,14 +90,35 @@
                         <Image url="@image/translation.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
                </children>
             </AnchorPane>
-            <JFXButton layoutX="443.0" layoutY="251.0" prefHeight="35.0" prefWidth="78.0" style="-fx-border-color: grey; -fx-border-radius: 12px; -fx-background-radius: 12px;" styleClass="buttonSearch" text="Confirm" AnchorPane.leftAnchor="443.0" AnchorPane.rightAnchor="339.6" />
+            <AnchorPane layoutX="112.0" prefHeight="575.0" prefWidth="750.0" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField alignment="CENTER" layoutX="40.0" layoutY="249.0" prefHeight="34.0" prefWidth="677.0" promptText="ĐIền từ cần tìm vào đây..." style="-fx-background-radius: 12px;" styleClass="font" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="32.799999999999955" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="619.0" layoutY="248.0" prefHeight="34.0" prefWidth="98.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="33.0">
+                     <font>
+                        <Font name="Bodoni MT" size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/icons8-search-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="276.0" layoutY="193.0" prefHeight="54.0" prefWidth="198.0" style="-fx-font-size: 18;" text="Từ cần xoá là:" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="276.0" />
+                  <JFXButton fx:id="confirm" alignment="CENTER" layoutX="334.0" layoutY="299.0" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #04c7b3;" styleClass="BUTTON" text="Xác nhận" textFill="WHITE" AnchorPane.leftAnchor="334.0" AnchorPane.rightAnchor="321.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children></AnchorPane>
             </children>
         </AnchorPane>
     </children>
