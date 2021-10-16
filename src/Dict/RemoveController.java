@@ -1,6 +1,7 @@
 package Dict;
 
 import com.jfoenix.controls.JFXButton;
+import com.sun.speech.freetts.en.us.FeatureProcessors;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -11,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -23,6 +26,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class RemoveController implements Initializable {
@@ -53,6 +57,7 @@ public class RemoveController implements Initializable {
 
     /**
      * Init Changed Listener.
+     *
      * @param url
      * @param resourceBundle
      */
@@ -63,30 +68,56 @@ public class RemoveController implements Initializable {
 
     @FXML
     void Delete(ActionEvent event) {
-        try {
-            Suggest.getSelectionModel().selectedItemProperty().removeListener(suggestChanged);
-            Suggest.getSelectionModel().clearSelection();
-            Suggest.getItems().remove(Search.getText());
-            Suggest.getSelectionModel().selectedItemProperty().addListener(suggestChanged);
+        if (Search.getText().equals("") || !InitDB.wordList.contains(Search.getText())) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Warning");
+            alert.setContentText("Nothing To Remove");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+        } else {
+            //Notify
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirm");
+            alert.setContentText("Are you sure that you want to remove " + Search.getText());
+            alert.setHeaderText(null);
 
-            //Update Database
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dictionary", "root", "menowa1801");
-            String deleteStat = "DELETE FROM dict WHERE word = ?";
-            PreparedStatement stat = con.prepareStatement(deleteStat);
-            stat.setString(1, Search.getText());
-            stat.executeUpdate();
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                System.out.println("Confirmed");
+                try {
 
-            //Update being Used Data
-            InitDB.details.remove(Search.getText());
-            InitDB.wordList.remove(Search.getText());
+                    Suggest.getSelectionModel().selectedItemProperty().removeListener(suggestChanged);
+                    Suggest.getSelectionModel().clearSelection();
+                    Suggest.getItems().remove(Search.getText());
+                    Suggest.getSelectionModel().selectedItemProperty().addListener(suggestChanged);
 
-            //Clear Text
-            Search.clear();
+                    //Update Database
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dictionary", "root", "menowa1801");
+                    String deleteStat = "DELETE FROM `check` WHERE word = ?";
+                    PreparedStatement stat = con.prepareStatement(deleteStat);
+                    stat.setString(1, Search.getText());
+                    stat.executeUpdate();
 
-            stat.close();
-            con.close();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+                    //Update being Used Data
+                    InitDB.details.remove(Search.getText());
+                    InitDB.wordList.remove(Search.getText());
+
+                    stat.close();
+                    con.close();
+
+                    //Notify
+                    Alert Confirm = new Alert(Alert.AlertType.INFORMATION);
+                    Confirm.setTitle("Notification");
+                    Confirm.setContentText(Search.getText() + " Has Been Removed");
+                    Confirm.setHeaderText(null);
+                    Confirm.showAndWait();
+
+                    //Clear Text
+                    Search.clear();
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
         }
     }
 
