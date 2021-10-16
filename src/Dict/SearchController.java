@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
@@ -28,7 +27,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SearchController implements Initializable {
@@ -36,17 +34,6 @@ public class SearchController implements Initializable {
     private Stage stage;
     private Scene scene;
     private FXMLLoader root;
-
-    /*
-     * Easter Egg.
-     */
-    @FXML
-    Hyperlink Roll;
-
-    @FXML
-    public void Rick() throws URISyntaxException, IOException {
-        Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-    }
 
     @FXML
     Button search;
@@ -67,17 +54,11 @@ public class SearchController implements Initializable {
     TextArea showWord;
 
     @FXML
-    Label warningLabel = new Label();
-
-    @FXML
     ListView<String> History;
 
     @FXML
     private WebView showDetails;
 
-
-    public SearchController() throws SQLException {
-    }
 
     /*
      * ChangeListerner for Suggest ListView.
@@ -126,8 +107,8 @@ public class SearchController implements Initializable {
     }
 
     @FXML
-    /**
-     * Prounce Word When Pronounce Button Clicked.
+    /*
+      Prounce Word When Pronounce Button Clicked.
      */
     void Barking(ActionEvent event) {
         System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
@@ -169,7 +150,6 @@ public class SearchController implements Initializable {
             History.getSelectionModel().clearSelection();
             History.getSelectionModel().selectedItemProperty().addListener(historyChanged);
 
-            warningLabel.setVisible(false);
         }
     }
 
@@ -183,7 +163,6 @@ public class SearchController implements Initializable {
         if (!compareText.equals("")) {
             for (String s : InitDB.wordList) {
                 if (s.startsWith(compareText)) {
-                    warningLabel.setText("");
                     contentToShow.add(s);
                 }
             }
@@ -197,10 +176,6 @@ public class SearchController implements Initializable {
      */
     public void Searching() {
         if (!textField.getText().equals("")) {
-            if (Suggest.getItems().isEmpty()) {
-                warningLabel.setVisible(true);
-                warningLabel.setText("Can't Find Word!");
-            }
             if (InitDB.details.containsKey(textField.getText())) {
                 showDetails.getEngine().loadContent(InitDB.details.get(textField.getText()));
                 showPronounce.setText(InitDB.pronounce.get(textField.getText()));
@@ -208,10 +183,22 @@ public class SearchController implements Initializable {
                 SearchHistory.addWord(textField.getText());
                 searched.clear();
                 searched.addAll(SearchHistory.searchedWords);
-            } else {
-                warningLabel.setVisible(true);
-                warningLabel.setText("Can't Find Word!");
             }
+            if (Suggest.getItems().isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Warning");
+                alert.setContentText("Can't Find Word");
+                alert.setHeaderText(null);
+                alert.showAndWait();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Warning");
+                alert.setContentText("Please Type It Correctly\n" +
+                        "Or choose from Suggestion");
+                alert.setHeaderText(null);
+                alert.showAndWait();
+            }
+
             History.setItems(searched);
         }
     }
