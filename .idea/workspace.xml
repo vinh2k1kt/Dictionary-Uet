@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c15229d5-6994-40b1-92a8-ce587344e113" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Dictionary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/EditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/InitDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/InitDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/RemoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/SearchHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/aboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/aboutUs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/addScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/addScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/editScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/editScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/removeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/removeScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/searchScene.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1zDJZjqDRZ1kRtj2xIiAEb3qyCT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Dict/image" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OOP\Dictionary\src\Dict\image" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\src\Dict" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\resources" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\temp" />
+      <recent name="C:\Users\Admin\OOP\Dictionary" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OOP\Dictionary\temp" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\src\Dict" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\src" />
+      <recent name="C:\Users\Admin\OOP\Dictionary" />
+      <recent name="C:\Users\Admin\OOP\Dictionary\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Dict.Main" />
+      <module name="Dictionary" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;D:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c15229d5-6994-40b1-92a8-ce587344e113" name="Changes" comment="" />
+      <created>1633676787715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633676787715</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
