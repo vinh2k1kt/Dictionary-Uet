@@ -4,6 +4,7 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.RemoveController">
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="795.0" style="-fx-background-color: #fff7d3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -51,7 +52,7 @@
                               <String fx:value="font" />
                            </styleClass>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="106.0" text="  Xoá" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" focusTraversable="false" prefHeight="36.0" prefWidth="106.0" text="  Xoá" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -99,8 +100,8 @@
             </AnchorPane>
             <AnchorPane layoutX="112.0" prefHeight="575.0" prefWidth="750.0" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="-1.3999999999999773" AnchorPane.topAnchor="0.0">
                <children>
-                  <TextField alignment="CENTER" layoutX="40.0" layoutY="249.0" prefHeight="34.0" prefWidth="677.0" promptText="ĐIền từ cần tìm vào đây..." style="-fx-background-radius: 12px;" styleClass="font" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="32.799999999999955" />
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="619.0" layoutY="248.0" prefHeight="34.0" prefWidth="98.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="33.0">
+                  <TextField fx:id="Search" alignment="CENTER" layoutX="43.0" layoutY="68.0" onKeyTyped="#updateOnKeyTyped" onMouseClicked="#onFocus" onMouseDragged="#onFocus" prefHeight="34.0" prefWidth="677.0" promptText="ĐIền từ cần tìm vào đây..." style="-fx-background-radius: 12px;" styleClass="font" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="29.799999999999955" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="3.0" layoutX="622.0" layoutY="68.0" prefHeight="34.0" prefWidth="98.0" styleClass="buttonSearch" text="Search" AnchorPane.rightAnchor="30.0">
                      <font>
                         <Font name="Bodoni MT" size="1.0" />
                      </font>
@@ -112,12 +113,13 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <Label alignment="CENTER" layoutX="276.0" layoutY="193.0" prefHeight="54.0" prefWidth="198.0" style="-fx-font-size: 18;" text="Từ cần xoá là:" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="276.0" />
-                  <JFXButton fx:id="confirm" alignment="CENTER" layoutX="334.0" layoutY="299.0" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #04c7b3;" styleClass="BUTTON" text="Xác nhận" textFill="WHITE" AnchorPane.leftAnchor="334.0" AnchorPane.rightAnchor="321.0">
+                  <Label alignment="CENTER" layoutX="266.0" layoutY="14.0" prefHeight="54.0" prefWidth="198.0" style="-fx-font-size: 18;" text="Từ cần xoá là:" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="286.0" />
+                  <JFXButton fx:id="Confirm" alignment="CENTER" layoutX="334.0" layoutY="515.0" onAction="#Delete" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #04c7b3;" styleClass="BUTTON" text="Xác nhận" textFill="WHITE" AnchorPane.leftAnchor="334.0" AnchorPane.rightAnchor="321.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
+                  <ListView fx:id="Suggest" layoutX="43.0" layoutY="121.0" prefHeight="382.0" prefWidth="678.0" AnchorPane.bottomAnchor="71.80000000000007" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="121.0" />
                </children></AnchorPane>
             </children>
         </AnchorPane>

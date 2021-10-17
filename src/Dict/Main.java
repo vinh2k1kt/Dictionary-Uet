@@ -25,7 +25,9 @@ public class Main extends Application {
         InitDB.init();
         Parent root = FXMLLoader.load(getClass().getResource("searchScene.fxml"));
         primaryStage.setTitle("Dictionary");
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("style.css");
+        primaryStage.setScene(scene);
         primaryStage.show();
 
         primaryStage.setOnCloseRequest(event -> {
