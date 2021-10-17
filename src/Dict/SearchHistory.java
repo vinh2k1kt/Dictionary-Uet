@@ -59,7 +59,7 @@ public class SearchHistory {
     /*
     Update Search History in Database
      */
-    public void updateOnClose() throws SQLException {
+    public static void updateOnClose() throws SQLException {
         Connection con = DriverManager.getConnection(url, user, pass);
         String insert = "INSERT INTO `searchhistory` (word) VALUES (?)";
         PreparedStatement statement = con.prepareStatement(insert);
@@ -74,12 +74,12 @@ public class SearchHistory {
      * Updates everything before closing app.
      * @param stage main Window.
      */
-    public void onCloseAction(Stage stage) throws SQLException {
+    public static void onCloseAction(Stage stage) throws SQLException {
         Connection con = DriverManager.getConnection(url, user, pass);
         Statement truncate = con.createStatement();
         String truncate_sql = "truncate table searchhistory";
         truncate.executeUpdate(truncate_sql);
-        this.updateOnClose();
+        updateOnClose();
         truncate.close();
         stage.close();
     }

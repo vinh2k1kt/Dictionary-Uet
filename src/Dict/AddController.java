@@ -74,7 +74,7 @@ public class AddController {
                 //Notify
                 Alert Confirm = new Alert(Alert.AlertType.INFORMATION);
                 Confirm.setTitle("Notification");
-                Confirm.setContentText(Word.getText() + " Has Been Added To Database");
+                Confirm.setContentText(Word.getText() + " Đã được thêm vào từ điển");
                 Confirm.setHeaderText(null);
                 Confirm.showAndWait();
 
@@ -96,7 +96,7 @@ public class AddController {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setContentText("Word already exists!\nPlease Move To Edit Word");
+            alert.setContentText("Từ không tồn tại!\nXin hãy chuyển sang mục sửa từ");
             alert.setHeaderText(null);
             alert.showAndWait();
 

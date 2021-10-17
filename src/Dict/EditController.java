@@ -110,6 +110,13 @@ public class EditController implements Initializable {
             stat.setString(3, Word.getText());
             stat.executeUpdate();
 
+            //Notify
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Warning");
+            alert.setContentText(Word.getText() + " Đã được cập nhật!");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+
             //Update being Used Data
             InitDB.pronounce.put(Word.getText(), Pronounce.getText());
             InitDB.details.put(Word.getText(), htmlEditor.getHtmlText());
@@ -163,14 +170,14 @@ public class EditController implements Initializable {
             if (Suggest.getItems().isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning");
-                alert.setContentText("Can't Find Word");
+                alert.setContentText("Từ không tồn tại!");
                 alert.setHeaderText(null);
                 alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Warning");
-                alert.setContentText("Please Type It Correctly\n" +
-                        "Or choose from Suggestion");
+                alert.setContentText("Ý bạn là: " + Suggest.getItems().get(0) + "?" +
+                        "\nBạn có thể chọn từ ở mục gợi ý");
                 alert.setHeaderText(null);
                 alert.showAndWait();
             }

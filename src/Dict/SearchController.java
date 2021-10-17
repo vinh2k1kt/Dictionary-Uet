@@ -188,14 +188,14 @@ public class SearchController implements Initializable {
             if (Suggest.getItems().isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Warning");
-                alert.setContentText("Can't Find Word");
+                alert.setContentText("Không tìm thấy từ!");
                 alert.setHeaderText(null);
                 alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Warning");
-                alert.setContentText("Please Type It Correctly\n" +
-                        "Or choose from Suggestion");
+                alert.setContentText("Ý bạn là: " + Suggest.getItems().get(0) + "?" +
+                        "\nBạn có thể chọn từ khác ở mục gợi ý");
                 alert.setHeaderText(null);
                 alert.showAndWait();
             }

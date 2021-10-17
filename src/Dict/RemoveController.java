@@ -71,14 +71,14 @@ public class RemoveController implements Initializable {
         if (Search.getText().equals("") || !InitDB.wordList.contains(Search.getText())) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Warning");
-            alert.setContentText("Nothing To Remove");
+            alert.setContentText("Từ không tồn tại!");
             alert.setHeaderText(null);
             alert.showAndWait();
         } else {
             //Notify
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirm");
-            alert.setContentText("Are you sure that you want to remove " + Search.getText());
+            alert.setContentText("Bạn có chắc bạn muốn xóa " + Search.getText() + "?");
             alert.setHeaderText(null);
 
             Optional<ButtonType> result = alert.showAndWait();
@@ -108,7 +108,7 @@ public class RemoveController implements Initializable {
                     //Notify
                     Alert Confirm = new Alert(Alert.AlertType.INFORMATION);
                     Confirm.setTitle("Notification");
-                    Confirm.setContentText(Search.getText() + " Has Been Removed");
+                    Confirm.setContentText("Đã xóa " + Search.getText() + " khỏi từ điển");
                     Confirm.setHeaderText(null);
                     Confirm.showAndWait();
 

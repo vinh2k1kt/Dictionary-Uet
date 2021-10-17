@@ -9,16 +9,6 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 public class Main extends Application {
-    private SearchHistory searchHistory;
-
-    {
-        try {
-            searchHistory = new SearchHistory();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         SearchHistory.init();
@@ -32,7 +22,7 @@ public class Main extends Application {
 
         primaryStage.setOnCloseRequest(event -> {
             try {
-                searchHistory.onCloseAction(primaryStage);
+                SearchHistory.onCloseAction(primaryStage);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
