@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
@@ -17,6 +19,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class AddController {
 
@@ -47,12 +50,20 @@ public class AddController {
         if (InitDB.wordList.contains(Word.getText())) {
             wordToCheck = Word.getText();
 
-            Alert alert = new Alert(Alert.AlertType.WARNING);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Warning");
-            alert.setContentText("Word already exists!\nPlease Move To Edit Word");
+            alert.setContentText(Word.getText() + " đã tồn tại trong từ điển\nXin hãy chuyển sang mục sửa từ hoặc thêm từ khác");
             alert.setHeaderText(null);
-            alert.showAndWait();
-            this.gotoEditScene(event);
+            alert.getDialogPane().lookupButton(ButtonType.OK).setVisible(false);
+
+            ButtonType buttonTypeSwitch = new ButtonType("Chuyển");
+            ButtonType buttonTypeStay = new ButtonType("Ở lại", ButtonBar.ButtonData.OK_DONE);
+            alert.getButtonTypes().addAll(buttonTypeStay, buttonTypeSwitch);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeSwitch) {
+                this.gotoEditScene(event);
+            }
         } else {
             try {
 
@@ -96,16 +107,23 @@ public class AddController {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setContentText("Từ không tồn tại!\nXin hãy chuyển sang mục sửa từ");
+            alert.setContentText("Từ đã tồn tại!\nXin hãy chuyển sang mục sửa từ");
             alert.setHeaderText(null);
-            alert.showAndWait();
+            alert.getDialogPane().lookupButton(ButtonType.OK).setVisible(false);
 
-            //Switch to Edit Scene
-            root = new FXMLLoader(Main.class.getResource("editScene.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root.load());
-            stage.setScene(scene);
-            stage.show();
+            ButtonType buttonTypeSwitch = new ButtonType("Chuyển");
+            ButtonType buttonTypeStay = new ButtonType("Ở lại");
+            alert.getButtonTypes().addAll(buttonTypeStay, buttonTypeSwitch);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeSwitch) {
+                root = new FXMLLoader(Main.class.getResource("editScene.fxml"));
+                stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root.load());
+                stage.setScene(scene);
+                scene.getStylesheets().add("style.css");
+                stage.show();
+            }
         }
     }
 

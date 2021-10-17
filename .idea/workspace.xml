@@ -3,23 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="afa84884-67e8-487f-8542-24100f79525f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dictionary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/addScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/addScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/editScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/editScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/removeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/removeScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/RemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/aboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/aboutUs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/addScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/addScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/editScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/editScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/removeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/removeScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/searchScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/temp/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zaBH1jKsOg5lcXzCPUughEyHwg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +70,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Dict.Main" />
       <module name="Dictionary" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;D:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.web" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;D:\Java 12\SDK16\lib&quot; --add-modules javafx.controls,javafx.fxml,javafx.web" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1634376229891</updated>
     </task>
+    <task id="LOCAL-00001" summary="Translate alert to vietnamese">
+      <created>1634475218883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634475218883</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,5 +106,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Translate alert to vietnamese" />
+    <option name="LAST_COMMIT_MESSAGE" value="Translate alert to vietnamese" />
   </component>
 </project>
