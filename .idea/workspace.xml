@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c15229d5-6994-40b1-92a8-ce587344e113" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dictionary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/EditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/EditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/RemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/RemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/SearchHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/searchScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/fe" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -33,7 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zaBH1jKsOg5lcXzCPUughEyHwg" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
