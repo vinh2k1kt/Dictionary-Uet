@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
@@ -48,10 +49,10 @@ public class SearchController implements Initializable {
     ListView<String> Suggest;
 
     @FXML
-    TextArea showPronounce;
+    Label showPronounce;
 
     @FXML
-    TextArea showWord;
+    Label showWord;
 
     @FXML
     ListView<String> History;
@@ -205,43 +206,36 @@ public class SearchController implements Initializable {
 
     //Switch Scene Function: not much to explain here!
 
-    public void functionBack(ActionEvent event) throws IOException {
-        root = new FXMLLoader(Main.class.getResource("searchScene.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root.load());
-        stage.setScene(scene);
-        stage.show();
-    }
-
     public void gotoEditScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("editScene.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
+        scene.getStylesheets().add("style.css");
         stage.show();
     }
-
     public void gotoAddScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("addScene.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
+        scene.getStylesheets().add("style.css");
         stage.show();
     }
-
     public void gotoRemoveScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("removeScene.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
+        scene.getStylesheets().add("style.css");
         stage.show();
     }
-
     public void gotoAboutUsScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("aboutusScene.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
+        scene.getStylesheets().add("style.css");
         stage.show();
     }
 }
