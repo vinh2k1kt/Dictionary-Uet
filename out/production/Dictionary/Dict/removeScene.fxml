@@ -66,6 +66,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
                         </JFXButton>
                      </children>
                   </VBox>
@@ -74,7 +77,7 @@
                         <Image url="@image/aaaa_adobespark.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Thông tin liên hệ" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -102,7 +105,7 @@
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
-                  <ListView fx:id="Suggest" layoutX="41.0" layoutY="128.0" prefHeight="377.0" prefWidth="678.0" style="-fx-border-color: grey;" styleClass="mylistview" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="128.0" />
+                  <ListView fx:id="Suggest" layoutX="41.0" layoutY="128.0" prefHeight="377.0" prefWidth="678.0" style="-fx-border-color: grey;" styleClass="listview" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="128.0" />
                </children></AnchorPane>
             </children>
         </AnchorPane>

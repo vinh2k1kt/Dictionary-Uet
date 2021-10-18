@@ -48,7 +48,7 @@ public class SearchHistory {
         if (searchedWords.contains(word)) {
             searchedWords.remove(word);
             searchedWords.addFirst(word);
-        } else if (searchedWords.size() >= 7) {
+        } else if (searchedWords.size() >= 11) {
             searchedWords.removeLast();
             searchedWords.addFirst(word);
         } else {

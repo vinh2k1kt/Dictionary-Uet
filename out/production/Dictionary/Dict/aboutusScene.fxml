@@ -30,10 +30,10 @@
                   <Font name="System Bold" size="12.0" />
                </font></TextField>
             <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="59.0" layoutY="323.0" style="-fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0); -fx-font-weight: bold; -fx-font-style: italic;" text="19020596" AnchorPane.leftAnchor="78.0" />
-            <Hyperlink fx:id="KwanFB" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="116.0" layoutY="378.0" onAction="#Kwan" prefHeight="31.0" prefWidth="160.0" text="Facebook" underline="true" AnchorPane.leftAnchor="78.0" />
+            <Hyperlink fx:id="KwanFB" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="116.0" layoutY="378.0" onAction="#Kwan" prefHeight="31.0" prefWidth="146.0" text="Facebook" underline="true" AnchorPane.leftAnchor="78.0" />
             <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="59.0" layoutY="429.0" style="-fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0); -fx-font-weight: bold; -fx-font-style: italic;" text="FE Designer" AnchorPane.leftAnchor="78.0" />
             <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="501.0" layoutY="318.0" style="-fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0); -fx-font-weight: bold; -fx-font-style: italic;" text="19020659" AnchorPane.rightAnchor="63.80000000000007" />
-            <Hyperlink fx:id="VinhFB" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="558.0" layoutY="376.0" onAction="#Vinh" prefHeight="28.0" prefWidth="160.0" text="Facebook" underline="true" AnchorPane.rightAnchor="64.0" />
+            <Hyperlink fx:id="VinhFB" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="558.0" layoutY="376.0" onAction="#Vinh" prefHeight="28.0" prefWidth="146.0" text="Facebook" underline="true" AnchorPane.rightAnchor="64.0" />
             <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="501.0" layoutY="424.0" style="-fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0); -fx-font-weight: bold; -fx-font-style: italic;" text="BE Developer" AnchorPane.rightAnchor="63.80000000000007" />
             <Hyperlink fx:id="Git" alignment="CENTER" focusTraversable="false" layoutX="227.0" layoutY="481.0" onAction="#goToGit" prefHeight="67.0" prefWidth="306.0" style="-fx-font-size: 25;" text="Our Project's Git Link" underline="true" AnchorPane.bottomAnchor="27.000000000000043" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="217.80000000000007" AnchorPane.topAnchor="481.00000000000006" />
             <Hyperlink fx:id="Roll" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="390.0" layoutY="548.0" onAction="#Rick" prefHeight="28.0" prefWidth="358.0" text="More infomation...(should click)" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="2.0" />
@@ -119,7 +119,7 @@
                   <Image url="@image/aaaa_adobespark.png" />
                </image>
             </ImageView>
-            <JFXButton focusTraversable="false" layoutX="7.0" layoutY="510.0" prefHeight="50.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Về chúng tôi" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+            <JFXButton contentDisplay="CENTER" focusTraversable="false" layoutX="16.0" layoutY="506.0" prefHeight="54.0" prefWidth="81.0" style="-fx-font-size: 14;" styleClass="button1" text="Thông tin liên hệ" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.600000000000023" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0">
                <font>
                   <Font size="15.0" />
                </font>

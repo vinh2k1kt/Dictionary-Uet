@@ -1,8 +1,8 @@
 package Dict;
 
 import com.jfoenix.controls.JFXButton;
-//import com.sun.speech.freetts.Voice;
-//import com.sun.speech.freetts.VoiceManager;
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -112,7 +112,21 @@ public class SearchController implements Initializable {
       Prounce Word When Pronounce Button Clicked.
      */
     void Barking(ActionEvent event) {
-
+        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+        Voice voice = VoiceManager.getInstance().getVoice("kevin16");
+        if (voice != null) {
+            voice.allocate();
+            try {
+                voice.setRate(150);
+                voice.setPitch(100);
+                voice.setVolume(100);
+                voice.speak(showWord.getText());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            throw new IllegalStateException("Can't Find voice:");
+        }
     }
 
 
