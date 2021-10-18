@@ -102,7 +102,7 @@
                         <Font size="15.0" />
                      </font>
                   </JFXButton>
-                  <ListView fx:id="Suggest" layoutX="41.0" layoutY="128.0" prefHeight="377.0" prefWidth="678.0" style="-fx-border-color: grey;" styleClass="mylistview" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="128.0" />
+                  <ListView fx:id="Suggest" layoutX="41.0" layoutY="128.0" prefHeight="377.0" prefWidth="678.0" style="-fx-border-color: grey;" styleClass="listview" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="128.0" />
                </children></AnchorPane>
             </children>
         </AnchorPane>

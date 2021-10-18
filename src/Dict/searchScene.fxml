@@ -231,7 +231,7 @@
                <children>
                   <AnchorPane prefHeight="407.0" prefWidth="138.0">
                      <children>
-                        <ListView fx:id="Suggest" focusTraversable="false" layoutX="-63.0" prefHeight="189.0" prefWidth="138.0" style="-fx-border-color: grey;" styleClass="mylistview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ListView fx:id="Suggest" focusTraversable="false" layoutX="-63.0" prefHeight="189.0" prefWidth="138.0" styleClass="listview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                   <Label alignment="CENTER" prefHeight="18.0" prefWidth="144.0" text="Từ đã tìm" textAlignment="CENTER">
@@ -239,7 +239,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="History" fixedCellSize="0.0" focusTraversable="false" maxHeight="449.0" prefHeight="412.0" prefWidth="138.0" style="-fx-border-color: grey;" styleClass="mylistview" />
+                  <ListView fx:id="History" fixedCellSize="0.0" focusTraversable="false" maxHeight="449.0" prefHeight="412.0" prefWidth="138.0" styleClass="listview" />
                </children>
             </VBox>
             <Label alignment="CENTER" layoutX="144.0" layoutY="70.0" prefHeight="18.0" prefWidth="138.0" text="Từ gợi ý">
@@ -299,7 +299,7 @@
                </font>
             </Label>
             <Label fx:id="showPronounce" alignment="CENTER" disable="true" layoutX="684.0" layoutY="98.0" prefHeight="42.0" prefWidth="138.0" style="-fx-background-color: white; -fx-border-color: grey;" />
-            <WebView fx:id="showDetails" layoutX="321.0" layoutY="243.0" prefHeight="299.0" prefWidth="502.0" styleClass="mylistview" AnchorPane.bottomAnchor="32.79998779296875" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="37.600006103515625" AnchorPane.topAnchor="243.00001220703126" />
+            <WebView fx:id="showDetails" layoutX="321.0" layoutY="243.0" prefHeight="299.0" prefWidth="502.0" styleClass="listview" AnchorPane.bottomAnchor="32.79998779296875" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="37.600006103515625" AnchorPane.topAnchor="243.00001220703126" />
          </children>
       </AnchorPane>
    </children>
