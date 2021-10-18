@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.web.WebView?>
+<?import javafx.scene.web.HTMLEditor?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dict.SearchController">
    <children>
@@ -295,11 +295,11 @@
             </Label>
             <Label fx:id="showWord" alignment="CENTER" contentDisplay="CENTER" disable="true" graphicTextGap="6.0" layoutX="321.0" layoutY="96.0" prefHeight="103.0" prefWidth="326.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-font-size: 30;" wrapText="true">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             <Label fx:id="showPronounce" alignment="CENTER" disable="true" layoutX="684.0" layoutY="98.0" prefHeight="42.0" prefWidth="138.0" style="-fx-background-color: white; -fx-border-color: grey;" />
-            <WebView fx:id="showDetails" layoutX="321.0" layoutY="243.0" prefHeight="299.0" prefWidth="502.0" AnchorPane.bottomAnchor="32.79998779296875" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="37.600006103515625" AnchorPane.topAnchor="243.00001220703126" />
+            <HTMLEditor fx:id="showDetails" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="321.0" layoutY="243.0" prefHeight="299.0" prefWidth="506.0" AnchorPane.bottomAnchor="32.80000000000001" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="33.60000000000002" AnchorPane.topAnchor="243.0" />
          </children>
       </AnchorPane>
    </children>

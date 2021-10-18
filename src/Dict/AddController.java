@@ -50,14 +50,14 @@ public class AddController {
         if (InitDB.wordList.contains(Word.getText())) {
             wordToCheck = Word.getText();
 
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setContentText(Word.getText() + " đã tồn tại trong từ điển\nXin hãy chuyển sang mục sửa từ hoặc thêm từ khác");
+            alert.setContentText(Word.getText() + " đã tồn tại!\nXin hãy chuyển sang mục sửa từ hoặc thêm từ khác");
             alert.setHeaderText(null);
             alert.getDialogPane().lookupButton(ButtonType.OK).setVisible(false);
 
             ButtonType buttonTypeSwitch = new ButtonType("Chuyển");
-            ButtonType buttonTypeStay = new ButtonType("Ở lại", ButtonBar.ButtonData.OK_DONE);
+            ButtonType buttonTypeStay = new ButtonType("Ở lại");
             alert.getButtonTypes().addAll(buttonTypeStay, buttonTypeSwitch);
 
             Optional<ButtonType> result = alert.showAndWait();
@@ -107,7 +107,7 @@ public class AddController {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
-            alert.setContentText("Từ đã tồn tại!\nXin hãy chuyển sang mục sửa từ");
+            alert.setContentText(Word.getText() + " đã tồn tại!\nXin hãy chuyển sang mục sửa từ hoặc thêm từ khác");
             alert.setHeaderText(null);
             alert.getDialogPane().lookupButton(ButtonType.OK).setVisible(false);
 

@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
@@ -18,11 +19,6 @@
             <TextField fx:id="Word" alignment="CENTER" layoutX="173.0" layoutY="79.0" prefHeight="34.0" prefWidth="274.0" promptText="Điền từ cần thêm..." style="-fx-background-radius: 12px;" AnchorPane.leftAnchor="173.0" />
             <Label alignment="CENTER" layoutX="173.0" layoutY="44.0" prefHeight="34.0" prefWidth="274.0" text="Từ muốn thêm " AnchorPane.leftAnchor="173.0" />
             <Label alignment="CENTER" layoutX="172.0" layoutY="121.0" prefHeight="26.0" prefWidth="622.0" text="Nghĩa của từ" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="67.0" />
-            <JFXButton fx:id="confirm" alignment="CENTER" layoutX="454.0" layoutY="526.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Submit" prefHeight="34.0" prefWidth="81.0" style="-fx-background-color: #04c7b3;" text="Xác nhận" textFill="WHITE" AnchorPane.bottomAnchor="14.600000000000023" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="325.4">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </JFXButton>
             <AnchorPane prefHeight="575.0" prefWidth="112.0" style="-fx-background-color: #04c7b3; -fx-effect: dropshadow(three-pass-box ,black ,25 ,0 ,0 ,0);" styleClass="shadow" AnchorPane.bottomAnchor="-0.20000000000004547" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="7.0" layoutY="126.0" prefHeight="299.0" prefWidth="80.0" spacing="50.0" style="-fx-background-color: #04c7b3;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
@@ -82,7 +78,7 @@
                         <Image url="@image/aaaa_adobespark.png" />
                      </image>
                   </ImageView>
-                  <JFXButton focusTraversable="false" layoutX="7.0" layoutY="499.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="98.0" style="-fx-font-size: 14;" styleClass="button1" text="Thông tin liên hệ" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                  <JFXButton focusTraversable="false" layoutX="17.0" layoutY="506.0" onAction="#gotoAboutUsScene" prefHeight="54.0" prefWidth="79.0" style="-fx-font-size: 14;" styleClass="button1" text="Thông tin liên hệ" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.800000000000068" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -92,6 +88,15 @@
             <TextField fx:id="Pronounce" alignment="CENTER" layoutX="536.0" layoutY="78.0" onMouseClicked="#checkWord" prefHeight="34.0" prefWidth="254.0" promptText="ĐIền phiên âm..." style="-fx-background-radius: 12px;" AnchorPane.rightAnchor="70.6" />
             <Label alignment="CENTER" layoutX="536.0" layoutY="48.0" prefHeight="26.0" prefWidth="254.0" text="Phiên âm" AnchorPane.rightAnchor="70.60000000000002" />
             <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="172.0" layoutY="147.0" onMouseClicked="#checkWord" prefHeight="365.0" prefWidth="622.0" style="-fx-border-color: grey;" styleClass="listview" AnchorPane.bottomAnchor="62.39999999999998" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="66.60000000000002" AnchorPane.topAnchor="147.0" />
+            <BorderPane layoutX="450.0" layoutY="522.0" prefHeight="38.0" prefWidth="85.0" AnchorPane.bottomAnchor="14.600000000000001" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="325.4">
+               <center>
+                  <JFXButton fx:id="confirm" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Submit" prefHeight="34.0" prefWidth="81.0" style="-fx-background-color: #04c7b3; -fx-background-radius: 12px; -fx-border-radius: 12px;" text="Xác nhận" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </center>
+            </BorderPane>
             </children>
         </AnchorPane>
     </children>

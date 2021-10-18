@@ -83,7 +83,6 @@ public class RemoveController implements Initializable {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK) {
-                System.out.println("Confirmed");
                 try {
 
                     Suggest.getSelectionModel().selectedItemProperty().removeListener(suggestChanged);

@@ -15,18 +15,13 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.web.WebView;
+import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
-
-import java.awt.*;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -58,7 +53,7 @@ public class SearchController implements Initializable {
     ListView<String> History;
 
     @FXML
-    private WebView showDetails;
+    HTMLEditor showDetails;
 
 
     /*
@@ -69,7 +64,7 @@ public class SearchController implements Initializable {
         public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
             String choosen = Suggest.getSelectionModel().getSelectedItem();
             textField.setText(choosen);
-            showDetails.getEngine().loadContent(InitDB.details.get(choosen));
+            showDetails.setHtmlText(InitDB.details.get(choosen));
             showPronounce.setText(InitDB.pronounce.get(choosen));
             showWord.setText(choosen);
             SearchHistory.addWord(choosen);
@@ -87,7 +82,7 @@ public class SearchController implements Initializable {
         public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
             String choosen = History.getSelectionModel().getSelectedItem();
             textField.setText(choosen);
-            showDetails.getEngine().loadContent(InitDB.details.get(choosen));
+            showDetails.setHtmlText(InitDB.details.get(choosen));
             showPronounce.setText(InitDB.pronounce.get(choosen));
             showWord.setText(choosen);
         }
@@ -105,6 +100,12 @@ public class SearchController implements Initializable {
 
         History.getSelectionModel().selectedItemProperty().addListener(historyChanged);
         History.setItems(searched);
+
+        Node[] nodes = showDetails.lookupAll(".tool-bar").toArray(new Node[0]);
+        for (Node node : nodes) {
+            node.setVisible(false);
+            node.setManaged(false);
+        }
     }
 
     @FXML
@@ -117,7 +118,7 @@ public class SearchController implements Initializable {
         if (voice != null) {
             voice.allocate();
             try {
-                voice.setRate(150);
+                voice.setRate(140);
                 voice.setPitch(100);
                 voice.setVolume(100);
                 voice.speak(showWord.getText());
@@ -175,7 +176,7 @@ public class SearchController implements Initializable {
     public void Searching() {
         if (!textField.getText().equals("")) {
             if (InitDB.details.containsKey(textField.getText())) {
-                showDetails.getEngine().loadContent(InitDB.details.get(textField.getText()));
+                showDetails.setHtmlText(InitDB.details.get(textField.getText()));
                 showPronounce.setText(InitDB.pronounce.get(textField.getText()));
                 showWord.setText(textField.getText());
                 SearchHistory.addWord(textField.getText());
@@ -205,31 +206,34 @@ public class SearchController implements Initializable {
 
     public void gotoEditScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("editScene.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
         stage.show();
     }
+
     public void gotoAddScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("addScene.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
         stage.show();
     }
+
     public void gotoRemoveScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("removeScene.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
         stage.show();
     }
+
     public void gotoAboutUsScene(ActionEvent event) throws IOException {
         root = new FXMLLoader(Main.class.getResource("aboutusScene.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
         scene.getStylesheets().add("style.css");
