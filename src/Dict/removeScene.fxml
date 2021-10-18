@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -100,12 +101,16 @@
                      </graphic>
                   </JFXButton>
                   <Label alignment="CENTER" layoutX="276.0" layoutY="32.0" prefHeight="54.0" prefWidth="198.0" style="-fx-font-size: 18;" text="Từ cần xoá là:" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="276.0" />
-                  <JFXButton fx:id="Confirm" alignment="CENTER" layoutX="327.0" layoutY="515.0" onAction="#Delete" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #04c7b3;" text="Xác nhận" textFill="WHITE" AnchorPane.bottomAnchor="25.800000000000047" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="328.0">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </JFXButton>
                   <ListView fx:id="Suggest" layoutX="41.0" layoutY="128.0" prefHeight="377.0" prefWidth="678.0" style="-fx-border-color: grey;" styleClass="listview" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="128.0" />
+                  <BorderPane layoutX="331.0" layoutY="522.0" prefHeight="38.0" prefWidth="98.0" AnchorPane.bottomAnchor="14.800000000000047" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="321.0">
+                     <center>
+                        <JFXButton fx:id="Confirm" alignment="CENTER" onAction="#Delete" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #04c7b3; -fx-background-radius: 12px; -fx-border-radius: 12px;" text="Xác nhận" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </center>
+                  </BorderPane>
                </children></AnchorPane>
             </children>
         </AnchorPane>
