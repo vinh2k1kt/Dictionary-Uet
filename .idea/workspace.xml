@@ -3,20 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="afa84884-67e8-487f-8542-24100f79525f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/aboutusScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/addScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/addScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/dictionary1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/editScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/editScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/removeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/removeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dictionary/Dict/searchScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/SearchHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/SearchHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/aboutusScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/addScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/addScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/dictionary1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/editScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/editScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dict/removeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/removeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dict/searchScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dict/searchScene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +28,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zaBH1jKsOg5lcXzCPUughEyHwg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,15 +35,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jfoenix-9.0.10.jar" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\OOP\Dictionary\src\Dict" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
