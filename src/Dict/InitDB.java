@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -23,7 +24,7 @@ public class InitDB {
         try {
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement stat = con.createStatement();
-            String sql = "select*from `check`";
+            String sql = "select*from `dict`";
             ResultSet rs = stat.executeQuery(sql);
             while (rs.next()) {
                 pronounce.put(rs.getString("word").toLowerCase(Locale.ROOT),

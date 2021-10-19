@@ -19,6 +19,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Collections;
 import java.util.Optional;
 
 public class AddController {
@@ -69,7 +70,7 @@ public class AddController {
 
                 //Update Database
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dictionary", "root", "menowa1801");
-                PreparedStatement stat = con.prepareStatement("INSERT INTO `check` (word, detail, pronounce) VALUES (?, ?, ?)");
+                PreparedStatement stat = con.prepareStatement("INSERT INTO `dict` (word, detail, pronounce) VALUES (?, ?, ?)");
                 stat.setString(1, Word.getText());
                 stat.setString(2, htmlEditor.getHtmlText());
                 stat.setString(3, Pronounce.getText());
@@ -79,6 +80,7 @@ public class AddController {
 
                 //Update Being Used Data
                 InitDB.wordList.add(Word.getText());
+                Collections.sort(InitDB.wordList);
                 InitDB.details.put(Word.getText(), htmlEditor.getHtmlText());
                 InitDB.pronounce.put(Word.getText(), Pronounce.getText());
 

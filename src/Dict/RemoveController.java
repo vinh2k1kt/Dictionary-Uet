@@ -92,7 +92,7 @@ public class RemoveController implements Initializable {
 
                     //Update Database
                     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dictionary", "root", "menowa1801");
-                    String deleteStat = "DELETE FROM `check` WHERE word = ?";
+                    String deleteStat = "DELETE FROM `dict` WHERE word = ?";
                     PreparedStatement stat = con.prepareStatement(deleteStat);
                     stat.setString(1, Search.getText());
                     stat.executeUpdate();

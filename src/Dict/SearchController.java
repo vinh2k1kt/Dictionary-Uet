@@ -106,6 +106,7 @@ public class SearchController implements Initializable {
             node.setVisible(false);
             node.setManaged(false);
         }
+        showDetails.setDisable(true);
     }
 
     @FXML
@@ -190,12 +191,20 @@ public class SearchController implements Initializable {
                 alert.setHeaderText(null);
                 alert.showAndWait();
             } else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Warning");
-                alert.setContentText("Ý bạn là: " + Suggest.getItems().get(0) + "?" +
-                        "\nBạn có thể chọn từ khác ở mục gợi ý");
-                alert.setHeaderText(null);
-                alert.showAndWait();
+                if (!InitDB.details.containsKey(textField.getText()))
+                {
+                    for (String s : InitDB.wordList) {
+                        if (s.startsWith(textField.getText())) {
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setTitle("Warning");
+                            alert.setContentText("Ý bạn là: " + s + "?" +
+                                    "\nBạn có thể chọn từ khác ở mục gợi ý");
+                            alert.setHeaderText(null);
+                            alert.showAndWait();
+                            break;
+                        }
+                    }
+                }
             }
 
             History.setItems(searched);
