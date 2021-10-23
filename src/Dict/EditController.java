@@ -87,6 +87,9 @@ public class EditController implements Initializable {
             for (String s : InitDB.wordList) {
                 if (s.startsWith(compareText)) {
                     contentToShow.add(s);
+                    if (contentToShow.size() > 23) {
+                        break;
+                    }
                 }
             }
         }
@@ -150,7 +153,7 @@ public class EditController implements Initializable {
             for (String s : InitDB.wordList) {
                 if (s.startsWith(compareText)) {
                     contentToShow.add(s);
-                    if (contentToShow.size() > 10) {
+                    if (contentToShow.size() > 23) {
                         break;
                     }
                 }
