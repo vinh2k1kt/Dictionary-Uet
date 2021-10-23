@@ -239,7 +239,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="History" fixedCellSize="0.0" focusTraversable="false" maxHeight="449.0" prefHeight="412.0" prefWidth="138.0" styleClass="listview" />
+                  <ListView fx:id="History" fixedCellSize="0.0" focusTraversable="false" prefHeight="412.0" prefWidth="138.0" styleClass="listview" />
                </children>
             </VBox>
             <Label alignment="CENTER" layoutX="144.0" layoutY="70.0" prefHeight="18.0" prefWidth="138.0" text="Từ gợi ý">
