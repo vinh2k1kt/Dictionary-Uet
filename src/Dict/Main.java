@@ -28,7 +28,7 @@ public class Main extends Application {
         primaryStage.setTitle("Dictionary");
         primaryStage.setScene(new Scene(root));
         primaryStage.getIcons().add(new Image("Dict/image/dictionary.png"));
-        root.getStylesheets().add("style.css");
+        root.getStylesheets().add("/style.css");
         primaryStage.show();
 
         primaryStage.setOnCloseRequest(event -> {

@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -123,7 +122,7 @@ public class AddController {
                 stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root.load());
                 stage.setScene(scene);
-                scene.getStylesheets().add("style.css");
+                scene.getStylesheets().add("/style.css");
                 stage.show();
             }
         }
@@ -136,7 +135,7 @@ public class AddController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoEditScene(ActionEvent event) throws IOException {
@@ -144,7 +143,7 @@ public class AddController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoRemoveScene(ActionEvent event) throws IOException {
@@ -152,7 +151,7 @@ public class AddController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoAboutUsScene(ActionEvent event) throws IOException {
@@ -160,7 +159,7 @@ public class AddController {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 }

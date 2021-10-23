@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/image" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/temp" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Dict/Style" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

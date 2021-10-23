@@ -101,12 +101,12 @@ public class SearchController implements Initializable {
         History.getSelectionModel().selectedItemProperty().addListener(historyChanged);
         History.setItems(searched);
 
+        // Hiding HTML Editor Tool-Bar
         Node[] nodes = showDetails.lookupAll(".tool-bar").toArray(new Node[0]);
         for (Node node : nodes) {
             node.setVisible(false);
             node.setManaged(false);
         }
-        showDetails.setDisable(true);
     }
 
     @FXML
@@ -221,7 +221,7 @@ public class SearchController implements Initializable {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 
@@ -230,7 +230,7 @@ public class SearchController implements Initializable {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 
@@ -239,7 +239,7 @@ public class SearchController implements Initializable {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 
@@ -248,7 +248,7 @@ public class SearchController implements Initializable {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 }

@@ -194,7 +194,7 @@ public class EditController implements Initializable {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoAddScene(ActionEvent event) throws IOException {
@@ -202,7 +202,7 @@ public class EditController implements Initializable {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoRemoveScene(ActionEvent event) throws IOException {
@@ -210,7 +210,7 @@ public class EditController implements Initializable {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
     public void gotoAboutUsScene(ActionEvent event) throws IOException {
@@ -218,7 +218,7 @@ public class EditController implements Initializable {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root.load());
         stage.setScene(scene);
-        scene.getStylesheets().add("style.css");
+        scene.getStylesheets().add("/style.css");
         stage.show();
     }
 }

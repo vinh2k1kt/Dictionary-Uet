@@ -1,7 +1,7 @@
 /* Insert font from here*/
 @font-face {
     font-family: Montserrat-Regular;
-    src: url('Dict/Montserrat-Regular.ttf');
+    src: url('Montserrat-Regular.ttf');
 }
 
 .text {
