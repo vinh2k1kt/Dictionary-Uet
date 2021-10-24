@@ -24,7 +24,7 @@ public class InitDB {
         try {
             Connection con = DriverManager.getConnection(url, user, pass);
             Statement stat = con.createStatement();
-            String sql = "select*from `dict`";
+            String sql = "select*from `dict` order by word";
             ResultSet rs = stat.executeQuery(sql);
             while (rs.next()) {
                 pronounce.put(rs.getString("word").toLowerCase(Locale.ROOT),

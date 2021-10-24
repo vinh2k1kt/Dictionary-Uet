@@ -21,8 +21,15 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
+
+import javax.xml.transform.Result;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SearchController implements Initializable {
@@ -30,6 +37,11 @@ public class SearchController implements Initializable {
     private Stage stage;
     private Scene scene;
     private FXMLLoader root;
+
+    private static String url = "jdbc:mysql://localhost:3306/dictionary";
+    private static String user = "root";
+    private static String pass = "menowa1801";
+    private final Connection con = DriverManager.getConnection(url, user, pass);
 
     @FXML
     Button search;
@@ -87,6 +99,9 @@ public class SearchController implements Initializable {
             showWord.setText(choosen);
         }
     };
+
+    public SearchController() throws SQLException {
+    }
 
     @Override
     /*
@@ -157,7 +172,7 @@ public class SearchController implements Initializable {
     /*
       Handler Key Event On TextField & Suggest ListView.
      */
-    void updateOnKeyType() {
+    void updateOnKeyType() throws SQLException {
         ObservableList<String> contentToShow = FXCollections.observableArrayList();
         String compareText = textField.getText();
         if (!compareText.equals("")) {
