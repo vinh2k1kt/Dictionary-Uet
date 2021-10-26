@@ -98,9 +98,7 @@
             </AnchorPane>
             <ListView fx:id="Suggest" layoutX="137.0" layoutY="87.0" prefHeight="472.0" prefWidth="171.0" styleClass="listview" AnchorPane.bottomAnchor="16.0" AnchorPane.topAnchor="87.0" />
             <Label alignment="CENTER" layoutX="370.0" layoutY="61.0" prefHeight="26.0" prefWidth="210.0" text="Từ" />
-            <Label fx:id="Word" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="87.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-color: white; -fx-border-color: grey;" />
             <Label alignment="CENTER" layoutX="618.0" layoutY="61.0" prefHeight="26.0" prefWidth="210.0" text="Phiên âm" />
-            <Label fx:id="Pronounce" alignment="CENTER" contentDisplay="CENTER" layoutX="618.0" layoutY="87.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-color: white; -fx-border-color: grey;" />
             <Label alignment="CENTER" layoutX="137.0" layoutY="61.0" prefHeight="26.0" prefWidth="171.0" text="Từ gợi ý" />
             <Label alignment="CENTER" layoutX="553.0" layoutY="149.0" prefHeight="26.0" prefWidth="95.0" styleClass="text" text="Nghĩa" AnchorPane.leftAnchor="553.0" AnchorPane.rightAnchor="212.79999999999995" />
             <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="370.0" layoutY="175.0" prefHeight="338.0" prefWidth="458.0" style="-fx-border-color: grey;" styleClass="listview" AnchorPane.bottomAnchor="61.60000000000002" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="32.60000000000002" AnchorPane.topAnchor="175.0" />
@@ -109,6 +107,8 @@
                   <JFXButton fx:id="Confirm" onAction="#Submit" prefHeight="35.0" prefWidth="98.0" style="-fx-border-color: grey; -fx-border-radius: 12px; -fx-background-radius: 12px; -fx-background-color: #04c7b3; -fx-text-fill: white;" text="Xác nhận" BorderPane.alignment="CENTER" />
                </center>
             </BorderPane>
+            <TextField fx:id="Word" alignment="CENTER" editable="false" layoutX="371.0" layoutY="85.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 12px;" />
+            <TextField fx:id="Pronounce" alignment="CENTER" layoutX="618.0" layoutY="87.0" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 12px;" />
             </children>
         </AnchorPane>
     </children>

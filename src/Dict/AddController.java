@@ -103,7 +103,7 @@ public class AddController {
      */
     @FXML
     void checkWord(MouseEvent event) throws IOException {
-        if (InitDB.wordList.contains(Word.getText())) {
+        if (InitDB.wordList.contains(Word.getText()) && !Word.getText().equals("")) {
             wordToCheck = Word.getText();
 
             Alert alert = new Alert(Alert.AlertType.WARNING);

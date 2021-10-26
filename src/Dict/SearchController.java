@@ -122,6 +122,7 @@ public class SearchController implements Initializable {
             node.setVisible(false);
             node.setManaged(false);
         }
+
     }
 
     @FXML

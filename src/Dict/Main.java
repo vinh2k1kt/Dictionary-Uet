@@ -33,7 +33,7 @@ public class Main extends Application {
 
         primaryStage.setOnCloseRequest(event -> {
             try {
-                searchHistory.onCloseAction(primaryStage);
+                SearchHistory.onCloseAction(primaryStage);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

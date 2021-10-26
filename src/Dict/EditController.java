@@ -44,10 +44,10 @@ public class EditController implements Initializable {
     private ListView<String> Suggest;
 
     @FXML
-    private Label Word;
+    private TextField Word;
 
     @FXML
-    private Label Pronounce;
+    private TextField Pronounce;
 
     @FXML
     private JFXButton Confirm;
