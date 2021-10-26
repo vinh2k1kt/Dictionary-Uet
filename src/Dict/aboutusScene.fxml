@@ -80,7 +80,7 @@
                         <String fx:value="font" />
                      </styleClass>
                   </JFXButton>
-                  <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="99.0" text="  Xoá" textFill="WHITE">
+                  <JFXButton buttonType="RAISED" focusTraversable="false" onAction="#gotoRemoveScene" prefHeight="36.0" prefWidth="99.0" text="  Xóa" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>

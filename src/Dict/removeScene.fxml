@@ -44,7 +44,7 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" focusTraversable="false" prefHeight="36.0" prefWidth="106.0" styleClass="button1" text="  Xoá" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" focusTraversable="false" prefHeight="36.0" prefWidth="106.0" styleClass="button1" text="  Xóa" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
